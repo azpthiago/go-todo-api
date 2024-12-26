@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: dockerfile
-    ports: '8080:8080' # Porta a qual a aplicação será exposta
+    ports:
+      - '8080:8080' # Porta a qual a aplicação será exposta
     depends_on:
       - db
     environment:

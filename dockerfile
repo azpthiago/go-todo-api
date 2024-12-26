@@ -1,5 +1,8 @@
 # Usa uma imagem oficial do Go
-FROM golang:1.23.4
+# Tomar bastante cuidado com a versão que esta no dockerfile e no go.mod, pois gera conflito e erro na hora do build
+FROM golang:1.21
+
+# OBS -> O container não roda na versão 1.23.4 do Go, investigando o por isto acontece
 
 # Diretório da aplicação dentro do volume
 WORKDIR /app
